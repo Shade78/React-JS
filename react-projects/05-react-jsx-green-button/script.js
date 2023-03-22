@@ -1,11 +1,11 @@
 const App = () => {
     // функциональный компонент
     // чтобы измнения при нажатии на кнопку перенеслись, нужно вызвать фунцию еще раз
-    let [buttonText, setButtonText] = React.useState('Click me');
+    const [buttonText, setButtonText] = React.useState('Click me');
     console.log(buttonText);
 
     const onButtonclick = () => {
-        setButtonText('Hello from react');
+        setButtonText('button has been pressed');
     };
     return (
         <div className="app">
@@ -18,3 +18,4 @@ const App = () => {
 const container = document.getElementById('app');
 const root = ReactDOM.createRoot(container);
 root.render(<App />);
+
